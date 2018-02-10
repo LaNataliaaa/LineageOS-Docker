@@ -79,3 +79,7 @@ RUN apt-get install -y xsltproc
 RUN apt-get install -y zip
 RUN apt-get install -y zlib1g-dev
 
+# 7. ENV for compile
+ENV USER=lineageos\
+ ANDROID_JACK_VM_ARGS="-Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx4G"\
+ USE_CCACHE=1 CCACHE_COMPRESS=1
